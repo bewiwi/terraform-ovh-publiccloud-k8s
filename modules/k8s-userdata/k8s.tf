@@ -22,7 +22,7 @@ Description=kubelet: The Kubernetes Node Agent
 Documentation=http://kubernetes.io/docs/
 
 [Service]
-ExecStart=/opt/k8s/bin/kubelet --address=127.0.0.1 \
+ExecStart=/opt/k8s/bin/kubelet --address=0.0.0.0 \
   --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf \
   --pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true \
   --network-plugin=cni --cni-conf-dir=/etc/cni/net.d --cni-bin-dir=/opt/cni/bin \
